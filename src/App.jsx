@@ -1,15 +1,19 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Routes, Route, Link } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App container">
-      <h1 className="text-center mt-5">Hello Vite + React + Bootstrap!</h1>
-      <button className="btn btn-primary">Bootstrap Button</button>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage></HomePage>}></Route>
+        <Route path="/about" element={<AboutPage></AboutPage>}></Route>
+      </Routes>
+    </>
   );
 }
 
