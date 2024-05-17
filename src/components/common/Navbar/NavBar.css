@@ -1,0 +1,31 @@
+.navBar {
+  padding: 0.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #165d59;
+  margin: 0;
+}
+
+.navBar .navBar__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin: auto;
+  list-style-type: none;
+}
+
+.navBar .navBar__right .navItem {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .navBar {
+    padding: 0.5rem 1rem;
+  }
+  .navBar .navBar__right {
+    gap: 1rem;
+  }
+}

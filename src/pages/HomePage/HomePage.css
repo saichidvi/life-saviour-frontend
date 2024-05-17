@@ -1,0 +1,14 @@
+.homePage__main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homePage__form {
+    margin-top: 10rem;
+    border: 2px solid #165d59;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+}
+

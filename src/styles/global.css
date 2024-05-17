@@ -1,5 +1,5 @@
 /* Import the Rubik font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 /* Set the base font size for rem units */
 html {
@@ -8,11 +8,13 @@ html {
 
 /* Apply the Rubik font to the entire application */
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f0f0;
+  height: 100%;
+  width: 100%;
 }
 
 /* Reset default margin and padding for all elements */
@@ -23,7 +25,12 @@ body {
 }
 
 /* Define global styles for headings and paragraphs */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   color: #333;
 }
@@ -31,4 +38,26 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-size: 1rem; /* 16px */
   color: #666;
+}
+
+/* Various font sizes used in the application */
+.fs__14px {
+  font-size: 14px;
+  line-height: 16px;
+}
+.fs__16px {
+  font-size: 16px;
+  line-height: 18px;
+}
+.fs__18px {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* Various font colors used in the website */
+.color__ffffff {
+  color: #ffffff;
+}
+.color__165d59 {
+  color: #165d59;
 }
