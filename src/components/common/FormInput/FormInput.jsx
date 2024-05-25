@@ -21,14 +21,14 @@ export default function FormInput({ data }) {
     });
   };
   return (
-    <div className="input">
-      <div className="input__lable fs__14px color__165d59 mb-2">{lableName}</div>
+    <div className="input mb-3">
+      <div className="input__lable fs__14px color__165d59 mb-1 fw500">{lableName}</div>
       <img
         className="input__image"
         src={inputImageLink}
         alt={`${lableName} svg`}></img>
       <input
-        className="input__control"
+        className="input__control fw400"
         type={inputType}
         placeholder={placeHolder}
         onChange={handleChange}></input>

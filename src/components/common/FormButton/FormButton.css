@@ -1,0 +1,18 @@
+ .form_btn {
+    width: 100%;
+    padding-block: 0.38rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    font-size: 12px;
+    background-color: #165d59;
+    color: white;
+    border: 1.5px solid #165d59 ;
+    transition: all 0.3s ease-out;
+    font-weight: 500;
+}
+.form_btn:hover {
+    background-color: transparent;
+    color: #165d59;
+    border: 1.5px solid #165d59;
+}

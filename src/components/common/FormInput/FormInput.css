@@ -5,17 +5,30 @@
 .input__image {
     position: absolute;
     margin: auto;
+    top : 2rem;
+    left :  0.5rem;
+    zoom: 0.9;
 }
 .input__control {
-    padding-block: 0.25rem;
+    width: 100%;
+    padding-block: 0.4rem;
     padding-left: 2rem;
+    padding-right: 1rem;
     border-radius: 0.5rem;
     border: 1.5px solid #165d59;
     font-size: 12px;
+    font-style: italic;
+    background-color: transparent;
 }
 .input__control:focus,
 .input__control:active {
-    border: 0px;
-    /* background-color: yellow; */
+    outline: 0;
+    border: 1.5px solid #165d59;
+    font-style: normal;
 }
 
+
+input[type="file" i] {
+    /* background-color: yellow; */
+    padding-block: 0.25rem;
+}
