@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomePage.css";
 import mobileIcon from "../../assets/svg_icons/mobile_icon.svg";
 import fileUploadIcon from "../../assets/svg_icons/fileUpload_icon.svg";
 import FormInput from "../../components/common/FormInput/FormInput";
 import FormButton from "../../components/common/FormButton/FormButton";
+import { useState } from "react";
+import { redu1 } from "../../store/UserSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function HomePage() {
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => {
+    console.log(state);
+    return state;
+  });
+  const [ambulanceBooked, setAmbulanceBooked] = useState(false);
+
+  useEffect(() => {
+    console.log(user);
+    dispatch(redu1());
+  }, [dispatch, user]);
+
   //Callback function which is sent to the child component
   const handleInputChange = (item) => {
     console.log(item);
@@ -14,10 +29,9 @@ export default function HomePage() {
   const handleButtonClick = (item) => {
     event.preventDefault();
     console.log("I got clicked");
-  }
+  };
 
-  //Inputs related to this page form
-  const inputsArray = [
+  const bookAmbulanceInputsArray = [
     {
       lableName: "Mobile Number",
       inputImageLink: mobileIcon,
@@ -35,19 +49,74 @@ export default function HomePage() {
       onInputChange: handleInputChange,
     },
   ];
+  const chatWithDriverInputsArray = [
+    {
+      lableName: "Mobile Number",
+      inputImageLink: mobileIcon,
+      placeHolder: "Enter Your Mobile Number",
+      inputType: "tel",
+      name: "mobile",
+      onInputChange: handleInputChange,
+    },
+  ];
+
   return (
     <div className="homePage__main">
-      <form className="homePage__form" action="">
-        <h4 className="form_heading mb-5">Book an Ambulance</h4>
-        <div className="mb-2">
-          {inputsArray.map((inputData, index) => {
-            return <FormInput key={index} data={inputData}></FormInput>;
-          })}
-        </div>
-        <div style={{marginTop : '2.5rem'}}>
-          <FormButton data={{ name: "Request OTP" , handleButtonClick}}></FormButton>
-        </div>
-      </form>
+      {ambulanceBooked ? (
+        <>
+          <form className="homePage__form" action="">
+            <h4 className="form_heading mb-5">Chat With Driver</h4>
+            <div className="mb-2">
+              {chatWithDriverInputsArray.map((inputData, index) => {
+                return <FormInput key={index} data={inputData}></FormInput>;
+              })}
+            </div>
+            <div style={{ marginTop: "2.5rem" }}>
+              <FormButton
+                data={{ name: "Request OTP", handleButtonClick }}></FormButton>
+              <span className="btn_styled_text">
+                Not booked ?{" "}
+                <a
+                  className="primary_text_color"
+                  href="#"
+                  onClick={() => {
+                    setAmbulanceBooked(false);
+                  }}>
+                  Click here
+                </a>{" "}
+                to Book an Ambulance
+              </span>
+            </div>
+          </form>
+        </>
+      ) : (
+        <>
+          <form className="homePage__form" action="">
+            <h4 className="form_heading mb-5">Book an Ambulance</h4>
+            <div className="mb-2">
+              {bookAmbulanceInputsArray.map((inputData, index) => {
+                return <FormInput key={index} data={inputData}></FormInput>;
+              })}
+            </div>
+            <div style={{ marginTop: "2.5rem" }}>
+              <FormButton
+                data={{ name: "Request OTP", handleButtonClick }}></FormButton>
+              <span className="btn_styled_text">
+                Already booked ?{" "}
+                <a
+                  className="primary_text_color"
+                  href="#"
+                  onClick={() => {
+                    setAmbulanceBooked(true);
+                  }}>
+                  Click here
+                </a>{" "}
+                to Chat with driver
+              </span>
+            </div>
+          </form>
+        </>
+      )}
     </div>
   );
 }
