@@ -53,6 +53,10 @@ p {
   font-size: 18px;
   line-height: 20px;
 }
+.fs__24px {
+  font-size: 24px;
+  line-height: 26px;
+}
 
 /* Various font colors used in the website */
 .color__ffffff {
@@ -60,6 +64,9 @@ p {
 }
 .color__165d59 {
   color: #165d59;
+}
+.color__828282 {
+  color: #828282;
 }
 
 /* Vrious font weights */

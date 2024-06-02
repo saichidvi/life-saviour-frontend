@@ -1,0 +1,43 @@
+.dataTable_container {
+  animation: all loading 0.5s ease-out;
+}
+
+.css-2ulfj5-MuiTypography-root {
+  text-align: center !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: #ffffff;
+  width: 13rem !important;
+  background-color: rgba(22, 93, 89, 0.9);
+  padding-block: 0.3rem !important;
+  border-radius: 0.5rem !important;
+}
+.tss-1akey0g-MUIDataTableHeadCell-data {
+  font-size: 15px;
+  font-weight: 500;
+  color: #165d59;
+}
+.css-pdct74-MuiTablePagination-selectLabel {
+  margin-top: 0.2rem !important;
+  font-size: 15px !important;
+  color: #165d59 !important;
+}
+.tss-1vd39vz-MUIDataTableBodyCell-stackedCommon:nth-last-of-type(2) {
+  display: none;
+}
+.dataTable_container .dataTable_RowCellValue {
+  padding-inline: 1rem;
+  min-width: 10rem;
+}
+.css-16c50h-MuiInputBase-root-MuiTablePagination-select {
+  margin-bottom: 0.7rem;
+}
+.MuiTablePagination-actions {
+  margin-bottom: 0.8rem !important;
+}
+.css-levciy-MuiTablePagination-displayedRows {
+  margin-top: 0.2rem;
+}
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  top: calc(50% - 0.55em) !important;
+}
