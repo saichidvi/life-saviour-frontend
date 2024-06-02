@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./styles/app.css";
-import HomePage from "./pages/HomePage/HomePage.jsx";
-import AboutPage from "./pages/AboutPage";
-import NavBar from "./components/common/Navbar/NavBar.jsx";
+import HomePage from "./pages/HomePage/home.jsx";
+import AboutPage from "./pages/about.jsx";
+import NavBar from "./components/common/Navbar/navbar.jsx";
+import "./styles/global.css";
+import Dashboard from "./pages/DashBoardPage/dashBoard.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/about" element={<AboutPage></AboutPage>}></Route>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
       </Routes>
     </>
   );

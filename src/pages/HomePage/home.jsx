@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "./HomePage.css";
+import "./home.css";
 import mobileIcon from "../../assets/svg_icons/mobile_icon.svg";
 import fileUploadIcon from "../../assets/svg_icons/fileUpload_icon.svg";
-import FormInput from "../../components/common/FormInput/FormInput";
-import FormButton from "../../components/common/FormButton/FormButton";
+import FormInput from "../../components/common/FormInput/formInput";
+import FormButton from "../../components/common/FormButton/formButton";
 import { useState } from "react";
 import { redu1 } from "../../store/UserSlice";
 import { useSelector, useDispatch } from "react-redux";

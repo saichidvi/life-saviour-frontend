@@ -1,5 +1,5 @@
 import React from "react";
-import "./FormButton.css";
+import "./formButton.css";
 import PropTypes from "prop-types";
 
 export default function FormButton({ data }) {

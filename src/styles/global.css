@@ -13,8 +13,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f0f0;
-  height: 100%;
   width: 100%;
+  height: 100vh;
 }
 
 /* Reset default margin and padding for all elements */
@@ -71,4 +71,14 @@ p {
 }
 .fw600 {
   font-weight: 600;
+}
+
+/* Global Animation */
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

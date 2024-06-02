@@ -1,5 +1,5 @@
 import React from "react";
-import "./FormInput.css";
+import "./formInput.css";
 import PropTypes from "prop-types";
 
 export default function FormInput({ data }) {

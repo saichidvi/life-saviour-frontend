@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "./navbar.css";
 
 export default function NavBar() {
   return (
@@ -15,8 +15,8 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a className="navItem fs__14px color__ffffff" href="/about">
-              About Us
+            <a className="navItem fs__14px color__ffffff" href="/dashboard">
+              Dashboard
             </a>
           </li>
           <li>

@@ -1,0 +1,6 @@
+.dashBoard__main {
+  width: 100%;
+  height: 100%;
+  margin: 2rem;
+  animation: loading 1s ease-out;
+}
