@@ -1,25 +1,21 @@
 import React, { useEffect } from "react";
 import "./home.css";
+import userIcon from "../../assets/svg_icons/user_icon.svg";
+import emailIcon from "../../assets/svg_icons/email_icon.svg";
 import mobileIcon from "../../assets/svg_icons/mobile_icon.svg";
-import fileUploadIcon from "../../assets/svg_icons/fileUpload_icon.svg";
 import FormInput from "../../components/common/FormInput/formInput";
 import FormButton from "../../components/common/FormButton/formButton";
+import fileUploadIcon from "../../assets/svg_icons/fileUpload_icon.svg";
+
 import { useState } from "react";
-import { redu1 } from "../../store/UserSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 export default function HomePage() {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => {
-    console.log(state);
     return state;
   });
   const [ambulanceBooked, setAmbulanceBooked] = useState(false);
-
-  useEffect(() => {
-    console.log(user);
-    dispatch(redu1());
-  }, [dispatch, user]);
 
   //Callback function which is sent to the child component
   const handleInputChange = (item) => {
@@ -32,6 +28,22 @@ export default function HomePage() {
   };
 
   const bookAmbulanceInputsArray = [
+    {
+      lableName: "Email",
+      inputImageLink: emailIcon,
+      placeHolder: "Enter Your Email Id",
+      inputType: "email",
+      name: "email",
+      onInputChange: handleInputChange,
+    },
+    {
+      lableName: "User Name",
+      inputImageLink: userIcon,
+      placeHolder: "Enter Your User Name",
+      inputType: "text",
+      name: "userName",
+      onInputChange: handleInputChange,
+    },
     {
       lableName: "Mobile Number",
       inputImageLink: mobileIcon,
@@ -100,7 +112,10 @@ export default function HomePage() {
             </div>
             <div style={{ marginTop: "2.5rem" }}>
               <FormButton
-                data={{ name: "Request OTP", handleButtonClick }}></FormButton>
+                data={{
+                  name: "Book Ambulance",
+                  handleButtonClick,
+                }}></FormButton>
               <span className="btn_styled_text">
                 Already booked ?{" "}
                 <a

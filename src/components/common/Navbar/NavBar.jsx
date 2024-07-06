@@ -20,7 +20,7 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a className="navItem fs__14px color__ffffff" href="/login">
+            <a className="navItem fs__14px color__ffffff" href="/auth">
               Login
             </a>
           </li>

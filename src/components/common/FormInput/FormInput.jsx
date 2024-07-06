@@ -22,9 +22,11 @@ export default function FormInput({ data }) {
   };
   return (
     <div className="input mb-3">
-      <div className="input__lable fs__14px color__165d59 mb-1 fw500">{lableName}</div>
+      <div className="input__lable fs__14px color__165d59 mb-1 fw500">
+        {lableName}
+      </div>
       <img
-        className="input__image"
+        className={`input__image ${name + "Svg"} `}
         src={inputImageLink}
         alt={`${lableName} svg`}></img>
       <input
